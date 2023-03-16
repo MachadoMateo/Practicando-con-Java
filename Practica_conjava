@@ -1,0 +1,59 @@
+/*Hacer un algoritmo que lea tres numeros enteros y luego los ordene ascendientemente
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package ordenar_numeros;
+//librerias
+
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author desarrollo
+ */
+public class Ordenar_numeros {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // definicion de objetos y variables
+        Scanner objread=new Scanner(System.in);
+        int num1,num2,num3;
+        //entrada de informacion lea num1,num2,num3
+        System.out.println(" Digite numero1 ");
+        num1=objread.nextInt();
+        System.out.println(" Digite numero2 ");
+        num2=objread.nextInt();
+        System.out.println(" Digite numero3 ");
+        num3=objread.nextInt();
+        //operaciones si (num1 < num2 and num3)
+        if (num1 < num2 && num1 < num3){
+            //si (num2 < num3)
+            if (num2 < num3){
+                System.out.println("\n El orden de los numeros es " +num1 + " " + num2 + " " + num3);
+            }else{
+                 System.out.println("\n El orden de los numeros es " +num1 + " " + num3 + " " + num2);
+            }
+        }else{             
+                if (num2 < num3){
+                    // si (num1 < num3)
+                    if (num1 < num3){
+                        //imprima num2,num1,num3
+                        System.out.println("\n El orden de los numeros es " +num2 + " " + num1 + " " + num3);
+                    }else {// sino
+                        //imprima num2,num3,num1
+                        System.out.println("\n El orden de los numeros es " +num2 + " " + num3 + " " + num1);   
+                    }    
+                }else{//sino
+                    if (num1 < num2){
+                        //imprima num3,num1,num2
+                        System.out.println("\n El orden de los numeros es " +num3 + " " + num1 + " " + num2);
+                    }else{
+                        System.out.println("\n el orden de los numeros es "+num3 + " " + num2 + " " + num1);
+                    }
+                }
+            }
+        }
+    }
